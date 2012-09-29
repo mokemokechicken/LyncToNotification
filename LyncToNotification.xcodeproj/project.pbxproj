@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE692D4F16166AEB0067D252 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE692D4E16166AEB0067D252 /* Cocoa.framework */; };
+		BE692D5916166AEB0067D252 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE692D5716166AEB0067D252 /* InfoPlist.strings */; };
+		BE692D6216166BE70067D252 /* LyncToNotificationExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BE692D6116166BE70067D252 /* LyncToNotificationExtension.m */; };
+		BE692D6616166C9A0067D252 /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = BE692D6516166C9A0067D252 /* NSObject+Swizzle.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BE692D4B16166AEB0067D252 /* LyncToNotification.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyncToNotification.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE692D4E16166AEB0067D252 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		BE692D5116166AEB0067D252 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		BE692D5216166AEB0067D252 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BE692D5316166AEB0067D252 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BE692D5616166AEB0067D252 /* LyncToNotification-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LyncToNotification-Info.plist"; sourceTree = "<group>"; };
+		BE692D5816166AEB0067D252 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BE692D5A16166AEB0067D252 /* LyncToNotification-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LyncToNotification-Prefix.pch"; sourceTree = "<group>"; };
+		BE692D6016166BE70067D252 /* LyncToNotificationExtension.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = LyncToNotificationExtension.h; path = Classes/LyncToNotificationExtension.h; sourceTree = "<group>"; };
+		BE692D6116166BE70067D252 /* LyncToNotificationExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LyncToNotificationExtension.m; path = Classes/LyncToNotificationExtension.m; sourceTree = "<group>"; };
+		BE692D6416166C9A0067D252 /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
+		BE692D6516166C9A0067D252 /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
+		BE692ED416166F6A0067D252 /* CDStructures.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = CDStructures.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE692D4816166AEB0067D252 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE692D4F16166AEB0067D252 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE692D4016166AEB0067D252 = {
+			isa = PBXGroup;
+			children = (
+				BE692ED316166F6A0067D252 /* LyncHeaders */,
+				BE692D5416166AEB0067D252 /* LyncToNotification */,
+				BE692D4D16166AEB0067D252 /* Frameworks */,
+				BE692D4C16166AEB0067D252 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE692D4C16166AEB0067D252 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE692D4B16166AEB0067D252 /* LyncToNotification.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE692D4D16166AEB0067D252 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE692D4E16166AEB0067D252 /* Cocoa.framework */,
+				BE692D5016166AEB0067D252 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE692D5016166AEB0067D252 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE692D5116166AEB0067D252 /* AppKit.framework */,
+				BE692D5216166AEB0067D252 /* CoreData.framework */,
+				BE692D5316166AEB0067D252 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		BE692D5416166AEB0067D252 /* LyncToNotification */ = {
+			isa = PBXGroup;
+			children = (
+				BE692D6316166C080067D252 /* Classes */,
+				BE692D5516166AEB0067D252 /* Supporting Files */,
+			);
+			path = LyncToNotification;
+			sourceTree = "<group>";
+		};
+		BE692D5516166AEB0067D252 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE692D5616166AEB0067D252 /* LyncToNotification-Info.plist */,
+				BE692D5716166AEB0067D252 /* InfoPlist.strings */,
+				BE692D5A16166AEB0067D252 /* LyncToNotification-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE692D6316166C080067D252 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BE692D6416166C9A0067D252 /* NSObject+Swizzle.h */,
+				BE692D6516166C9A0067D252 /* NSObject+Swizzle.m */,
+				BE692D6016166BE70067D252 /* LyncToNotificationExtension.h */,
+				BE692D6116166BE70067D252 /* LyncToNotificationExtension.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		BE692ED316166F6A0067D252 /* LyncHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				BE692ED416166F6A0067D252 /* CDStructures.h */,
+			);
+			path = LyncHeaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE692D4A16166AEB0067D252 /* LyncToNotification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE692D5D16166AEB0067D252 /* Build configuration list for PBXNativeTarget "LyncToNotification" */;
+			buildPhases = (
+				BE692D4716166AEB0067D252 /* Sources */,
+				BE692D4816166AEB0067D252 /* Frameworks */,
+				BE692D4916166AEB0067D252 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LyncToNotification;
+			productName = LyncToNotification;
+			productReference = BE692D4B16166AEB0067D252 /* LyncToNotification.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE692D4216166AEB0067D252 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "森下 健";
+			};
+			buildConfigurationList = BE692D4516166AEB0067D252 /* Build configuration list for PBXProject "LyncToNotification" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BE692D4016166AEB0067D252;
+			productRefGroup = BE692D4C16166AEB0067D252 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE692D4A16166AEB0067D252 /* LyncToNotification */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE692D4916166AEB0067D252 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE692D5916166AEB0067D252 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE692D4716166AEB0067D252 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE692D6216166BE70067D252 /* LyncToNotificationExtension.m in Sources */,
+				BE692D6616166C9A0067D252 /* NSObject+Swizzle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BE692D5716166AEB0067D252 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE692D5816166AEB0067D252 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE692D5B16166AEB0067D252 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BE692D5C16166AEB0067D252 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BE692D5E16166AEB0067D252 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LyncToNotification/LyncToNotification-Prefix.pch";
+				INFOPLIST_FILE = "LyncToNotification/LyncToNotification-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		BE692D5F16166AEB0067D252 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LyncToNotification/LyncToNotification-Prefix.pch";
+				INFOPLIST_FILE = "LyncToNotification/LyncToNotification-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE692D4516166AEB0067D252 /* Build configuration list for PBXProject "LyncToNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE692D5B16166AEB0067D252 /* Debug */,
+				BE692D5C16166AEB0067D252 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE692D5D16166AEB0067D252 /* Build configuration list for PBXNativeTarget "LyncToNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE692D5E16166AEB0067D252 /* Debug */,
+				BE692D5F16166AEB0067D252 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE692D4216166AEB0067D252 /* Project object */;
+}
