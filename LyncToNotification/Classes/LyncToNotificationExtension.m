@@ -55,12 +55,12 @@ static LyncToNotificationExtensionUserNotificationDelegate *delegate = nil;
     NSLog(@"END %s **********************************************", __FUNCTION__);
 }
 
-//- (void)AppendUserUniNoticeLyncToNotificationExtension:(struct BUser *)arg1 inPrefixStrIndex:(short)arg2 inSuffixStrIndex:(short)arg3 inStyleIndex:(short)arg4 inPictID:(short)arg5 fInsertUserTile:(bool)arg6
-//{
-//    NSLog(@"START %s **********************************************", __FUNCTION__);
-//    [self AppendUserUniNoticeLyncToNotificationExtension:arg1 inPrefixStrIndex:arg2 inSuffixStrIndex:arg3 inStyleIndex:arg4 inPictID:arg5 fInsertUserTile:arg6];
-//    NSLog(@"END %s **********************************************", __FUNCTION__);
-//}
+- (void)AppendUserUniNoticeLyncToNotificationExtension:(struct BUser *)arg1 inPrefixStrIndex:(short)arg2 inSuffixStrIndex:(short)arg3 inStyleIndex:(short)arg4 inPictID:(short)arg5 fInsertUserTile:(bool)arg6
+{
+    NSLog(@"START %s **********************************************", __FUNCTION__);
+    [self AppendUserUniNoticeLyncToNotificationExtension:arg1 inPrefixStrIndex:arg2 inSuffixStrIndex:arg3 inStyleIndex:arg4 inPictID:arg5 fInsertUserTile:arg6];
+    NSLog(@"END %s **********************************************", __FUNCTION__);
+}
 
 // どうやら警告系のメッセージのときに呼ばれるようだ
 - (void)AppendUserUniNoticeWithCFStringLyncToNotificationExtension:(const struct BUser *)arg1 inMessageString:(struct __CFString *)arg2 inStyleIndex:(short)arg3 inPictID:(short)arg4 inAddDivider:(bool)arg5 pstrHTML:(const struct CFString *)arg6
