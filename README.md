@@ -1,5 +1,16 @@
+CAUTION
+-------
+
+THIS IS UNDER DEVELOPPING.
+BECAUSE Lync Messages can not be sent by myself...
+
+
 What is This
 =========
+
+SIMBL Plugin of 'Microsoft Lync for mac' to send notifications to Notification Center(of Mountain Lion).
+
+This plugin send notifications to the Notification Center when receiving a Lync message and the Lync window is in background.
 
 
 Requirements
