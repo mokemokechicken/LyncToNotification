@@ -24,9 +24,8 @@
 		BE692D5A16166AEB0067D252 /* LyncToNotification-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LyncToNotification-Prefix.pch"; sourceTree = "<group>"; };
 		BE692D6016166BE70067D252 /* LyncToNotificationExtension.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = LyncToNotificationExtension.h; path = Classes/LyncToNotificationExtension.h; sourceTree = "<group>"; };
 		BE692D6116166BE70067D252 /* LyncToNotificationExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LyncToNotificationExtension.m; path = Classes/LyncToNotificationExtension.m; sourceTree = "<group>"; };
-		BE692D6416166C9A0067D252 /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
-		BE692D6516166C9A0067D252 /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
-		BE692ED416166F6A0067D252 /* CDStructures.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = CDStructures.h; sourceTree = "<group>"; };
+		BE692D6416166C9A0067D252 /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Swizzle.h"; path = "Classes/NSObject+Swizzle.h"; sourceTree = "<group>"; };
+		BE692D6516166C9A0067D252 /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Swizzle.m"; path = "Classes/NSObject+Swizzle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +43,6 @@
 		BE692D4016166AEB0067D252 = {
 			isa = PBXGroup;
 			children = (
-				BE692ED316166F6A0067D252 /* LyncHeaders */,
 				BE692D5416166AEB0067D252 /* LyncToNotification */,
 				BE692D4D16166AEB0067D252 /* Frameworks */,
 				BE692D4C16166AEB0067D252 /* Products */,
@@ -106,14 +104,6 @@
 				BE692D6116166BE70067D252 /* LyncToNotificationExtension.m */,
 			);
 			name = Classes;
-			sourceTree = "<group>";
-		};
-		BE692ED316166F6A0067D252 /* LyncHeaders */ = {
-			isa = PBXGroup;
-			children = (
-				BE692ED416166F6A0067D252 /* CDStructures.h */,
-			);
-			path = LyncHeaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +286,7 @@
 				BE692D5F16166AEB0067D252 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
