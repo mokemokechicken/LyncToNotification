@@ -20,7 +20,8 @@ Tested only
 Install
 -------
 
-Run LyncToNotification.pkg, install into "~/Library/Application Support/SIMBL/Plugins/LyncToNotification.bundle"
+1. Run LyncToNotification.pkg, install into "~/Library/Application Support/SIMBL/Plugins/LyncToNotification.bundle"
+2. Restart Lync.
 
 Uninstall
 ---------
