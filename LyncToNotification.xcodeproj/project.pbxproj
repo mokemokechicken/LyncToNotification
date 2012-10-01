@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0964718616195EEA00BC1F47 /* LyncToNotificationMessageParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0964718516195EEA00BC1F47 /* LyncToNotificationMessageParser.m */; };
+		0964718F1619678400BC1F47 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0964718E1619678400BC1F47 /* SenTestingKit.framework */; };
+		096471901619678400BC1F47 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE692D4E16166AEB0067D252 /* Cocoa.framework */; };
+		096471961619678400BC1F47 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 096471941619678400BC1F47 /* InfoPlist.strings */; };
+		096471991619678400BC1F47 /* LyncToNotificationMessageParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 096471981619678400BC1F47 /* LyncToNotificationMessageParserTest.m */; };
+		0964719E16196A1600BC1F47 /* LyncToNotificationMessageParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0964718516195EEA00BC1F47 /* LyncToNotificationMessageParser.m */; };
 		BE692D4F16166AEB0067D252 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE692D4E16166AEB0067D252 /* Cocoa.framework */; };
 		BE692D5916166AEB0067D252 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE692D5716166AEB0067D252 /* InfoPlist.strings */; };
 		BE692D6216166BE70067D252 /* LyncToNotificationExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BE692D6116166BE70067D252 /* LyncToNotificationExtension.m */; };
@@ -14,6 +20,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0964718416195EEA00BC1F47 /* LyncToNotificationMessageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LyncToNotificationMessageParser.h; path = Classes/LyncToNotificationMessageParser.h; sourceTree = "<group>"; };
+		0964718516195EEA00BC1F47 /* LyncToNotificationMessageParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LyncToNotificationMessageParser.m; path = Classes/LyncToNotificationMessageParser.m; sourceTree = "<group>"; };
+		0964718D1619678400BC1F47 /* LyncToNotificationTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyncToNotificationTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0964718E1619678400BC1F47 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		096471931619678400BC1F47 /* LyncToNotificationTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LyncToNotificationTest-Info.plist"; sourceTree = "<group>"; };
+		096471951619678400BC1F47 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		096471971619678400BC1F47 /* LyncToNotificationMessageParserTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LyncToNotificationMessageParserTest.h; sourceTree = "<group>"; };
+		096471981619678400BC1F47 /* LyncToNotificationMessageParserTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyncToNotificationMessageParserTest.m; sourceTree = "<group>"; };
+		0964719A1619678400BC1F47 /* LyncToNotificationTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LyncToNotificationTest-Prefix.pch"; sourceTree = "<group>"; };
 		BE692D4B16166AEB0067D252 /* LyncToNotification.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyncToNotification.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE692D4E16166AEB0067D252 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		BE692D5116166AEB0067D252 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -29,6 +44,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		096471891619678400BC1F47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0964718F1619678400BC1F47 /* SenTestingKit.framework in Frameworks */,
+				096471901619678400BC1F47 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BE692D4816166AEB0067D252 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -40,10 +64,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		096471911619678400BC1F47 /* LyncToNotificationTest */ = {
+			isa = PBXGroup;
+			children = (
+				096471971619678400BC1F47 /* LyncToNotificationMessageParserTest.h */,
+				096471981619678400BC1F47 /* LyncToNotificationMessageParserTest.m */,
+				096471921619678400BC1F47 /* Supporting Files */,
+			);
+			path = LyncToNotificationTest;
+			sourceTree = "<group>";
+		};
+		096471921619678400BC1F47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				096471931619678400BC1F47 /* LyncToNotificationTest-Info.plist */,
+				096471941619678400BC1F47 /* InfoPlist.strings */,
+				0964719A1619678400BC1F47 /* LyncToNotificationTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		BE692D4016166AEB0067D252 = {
 			isa = PBXGroup;
 			children = (
 				BE692D5416166AEB0067D252 /* LyncToNotification */,
+				096471911619678400BC1F47 /* LyncToNotificationTest */,
 				BE692D4D16166AEB0067D252 /* Frameworks */,
 				BE692D4C16166AEB0067D252 /* Products */,
 			);
@@ -53,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				BE692D4B16166AEB0067D252 /* LyncToNotification.bundle */,
+				0964718D1619678400BC1F47 /* LyncToNotificationTest.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				BE692D4E16166AEB0067D252 /* Cocoa.framework */,
+				0964718E1619678400BC1F47 /* SenTestingKit.framework */,
 				BE692D5016166AEB0067D252 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -102,6 +149,8 @@
 				BE692D6516166C9A0067D252 /* NSObject+Swizzle.m */,
 				BE692D6016166BE70067D252 /* LyncToNotificationExtension.h */,
 				BE692D6116166BE70067D252 /* LyncToNotificationExtension.m */,
+				0964718416195EEA00BC1F47 /* LyncToNotificationMessageParser.h */,
+				0964718516195EEA00BC1F47 /* LyncToNotificationMessageParser.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -109,6 +158,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0964718C1619678400BC1F47 /* LyncToNotificationTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0964719B1619678400BC1F47 /* Build configuration list for PBXNativeTarget "LyncToNotificationTest" */;
+			buildPhases = (
+				096471881619678400BC1F47 /* Sources */,
+				096471891619678400BC1F47 /* Frameworks */,
+				0964718A1619678400BC1F47 /* Resources */,
+				0964718B1619678400BC1F47 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LyncToNotificationTest;
+			productName = LyncToNotificationTest;
+			productReference = 0964718D1619678400BC1F47 /* LyncToNotificationTest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		BE692D4A16166AEB0067D252 /* LyncToNotification */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE692D5D16166AEB0067D252 /* Build configuration list for PBXNativeTarget "LyncToNotification" */;
@@ -148,11 +215,20 @@
 			projectRoot = "";
 			targets = (
 				BE692D4A16166AEB0067D252 /* LyncToNotification */,
+				0964718C1619678400BC1F47 /* LyncToNotificationTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0964718A1619678400BC1F47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				096471961619678400BC1F47 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BE692D4916166AEB0067D252 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,19 +239,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0964718B1619678400BC1F47 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		096471881619678400BC1F47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				096471991619678400BC1F47 /* LyncToNotificationMessageParserTest.m in Sources */,
+				0964719E16196A1600BC1F47 /* LyncToNotificationMessageParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BE692D4716166AEB0067D252 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BE692D6216166BE70067D252 /* LyncToNotificationExtension.m in Sources */,
 				BE692D6616166C9A0067D252 /* NSObject+Swizzle.m in Sources */,
+				0964718616195EEA00BC1F47 /* LyncToNotificationMessageParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		096471941619678400BC1F47 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				096471951619678400BC1F47 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		BE692D5716166AEB0067D252 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -187,6 +297,37 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0964719C1619678400BC1F47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LyncToNotificationTest/LyncToNotificationTest-Prefix.pch";
+				INFOPLIST_FILE = "LyncToNotificationTest/LyncToNotificationTest-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		0964719D1619678400BC1F47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LyncToNotificationTest/LyncToNotificationTest-Prefix.pch";
+				INFOPLIST_FILE = "LyncToNotificationTest/LyncToNotificationTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		BE692D5B16166AEB0067D252 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -270,6 +411,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0964719B1619678400BC1F47 /* Build configuration list for PBXNativeTarget "LyncToNotificationTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0964719C1619678400BC1F47 /* Debug */,
+				0964719D1619678400BC1F47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		BE692D4516166AEB0067D252 /* Build configuration list for PBXProject "LyncToNotification" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

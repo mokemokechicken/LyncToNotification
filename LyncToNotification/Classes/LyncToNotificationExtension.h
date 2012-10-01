@@ -88,8 +88,6 @@ struct BUser {
 @end
 
 
-
-
 @interface LyncToNotificationExtensionUserNotificationDelegate : NSObject
 <NSUserNotificationCenterDelegate>
 {
@@ -99,7 +97,6 @@ struct BUser {
 @property (retain) NSString *userName;
 @property (retain) NSString *message;
 @end
-
 
 
 

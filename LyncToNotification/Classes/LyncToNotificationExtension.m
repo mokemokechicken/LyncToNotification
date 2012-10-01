@@ -10,8 +10,10 @@
 #import <objc/objc-class.h>
 #import "NSObject+Swizzle.h"
 #import <Foundation/Foundation.h>
+#import "LyncToNotificationMessageParser.h"
 
 static LyncToNotificationExtensionUserNotificationDelegate *delegate = nil;
+static LyncToNotificationMessageParser *parser = nil;
 
 @implementation NSObject(LyncToNotificationExtension)
 + (void)load
@@ -26,6 +28,7 @@ static LyncToNotificationExtensionUserNotificationDelegate *delegate = nil;
     
     // Don't AutoRelease
     delegate = [[LyncToNotificationExtensionUserNotificationDelegate alloc] init];
+    parser = [[LyncToNotificationMessageParser alloc] init];
     [NSUserNotificationCenter defaultUserNotificationCenter].delegate = delegate;
     NSLog(@"END %s **********************************************", __FUNCTION__);
 }
@@ -50,18 +53,23 @@ static LyncToNotificationExtensionUserNotificationDelegate *delegate = nil;
     //[self logBUser:arg1->_field5];
     
     // TODO: I want to retrive user name from struct BUser, but I can't...
-    delegate.message = [self removeTag:s];
+    delegate.message = [self retriveText:s];
     // NSLog(@"END %s **********************************************", __FUNCTION__);
 }
 
 // 
-- (NSString *)removeTag:(NSString *)message
+//- (NSString *)removeTag:(NSString *)message
+//{
+//    NSError *error = nil;
+//    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"</?[^>]*>" options:0 error:&error];
+//    NSString *ret = [regex stringByReplacingMatchesInString:message options:0 range:NSMakeRange(0, [message length]) withTemplate:@""];
+//    //NSLog(@"removeTag: [%@]", ret);
+//    return ret;
+//}
+
+- (NSString *)retriveText:(NSString *)message
 {
-    NSError *error = nil;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"</?[^>]*>" options:0 error:&error];
-    NSString *ret = [regex stringByReplacingMatchesInString:message options:0 range:NSMakeRange(0, [message length]) withTemplate:@""];
-    //NSLog(@"removeTag: [%@]", ret);
-    return ret;
+    return [parser parseMessage:message];
 }
 
 - (void)logBUser:(const struct BUser *)buser
