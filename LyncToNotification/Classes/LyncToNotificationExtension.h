@@ -85,19 +85,6 @@ struct BUser {
 @interface NSObject(LyncToNotificationExtension)
 - (void)IncrementBadgeLyncToNotificationExtension;
 - (void)ReceiveMessageLyncToNotificationExtension:(const struct BInstantMessage *)arg1;
-- (void)AppendUserUniNoticeLyncToNotificationExtension:(struct BUser *)arg1
-                                      inPrefixStrIndex:(short)arg2
-                                      inSuffixStrIndex:(short)arg3
-                                          inStyleIndex:(short)arg4
-                                              inPictID:(short)arg5
-                                       fInsertUserTile:(_Bool)arg6;
-
-- (void)AppendUserUniNoticeWithCFStringLyncToNotificationExtension:(const struct BUser *)arg1
-                                                   inMessageString:(struct __CFString *)arg2
-                                                      inStyleIndex:(short)arg3
-                                                          inPictID:(short)arg4
-                                                      inAddDivider:(_Bool)arg5
-                                                          pstrHTML:(const struct CFString *)arg6;
 @end
 
 

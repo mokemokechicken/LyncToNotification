@@ -1,10 +1,3 @@
-CAUTION
--------
-
-THIS IS UNDER DEVELOPPING.
-BECAUSE Lync Messages can not be sent by myself...
-
-
 What is This
 =========
 

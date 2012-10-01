@@ -24,11 +24,6 @@ static LyncToNotificationExtensionUserNotificationDelegate *delegate = nil;
     [class swizzleMethod:@selector(ReceiveMessage:)
               withMethod:@selector(ReceiveMessageLyncToNotificationExtension:)];
     
-    [class swizzleMethod:@selector(AppendUserUniNotice:inPrefixStrIndex:inSuffixStrIndex:inStyleIndex:inPictID:fInsertUserTile:)
-              withMethod:@selector(AppendUserUniNoticeLyncToNotificationExtension:inPrefixStrIndex:inSuffixStrIndex:inStyleIndex:inPictID:fInsertUserTile:)];
-    
-    [class swizzleMethod:@selector(AppendUserUniNoticeWithCFString:inMessageString:inStyleIndex:inPictID:inAddDivider:pstrHTML:)
-              withMethod:@selector(AppendUserUniNoticeWithCFStringLyncToNotificationExtension:inMessageString:inStyleIndex:inPictID:inAddDivider:pstrHTML:)];
     // Don't AutoRelease
     delegate = [[LyncToNotificationExtensionUserNotificationDelegate alloc] init];
     [NSUserNotificationCenter defaultUserNotificationCenter].delegate = delegate;
@@ -39,39 +34,34 @@ static LyncToNotificationExtensionUserNotificationDelegate *delegate = nil;
 {
     NSLog(@"START %s **********************************************", __FUNCTION__);
     [self IncrementBadgeLyncToNotificationExtension];
-    [self notificate:delegate.userName message:delegate.message];
+    if (delegate.message) {
+        [self notificate:delegate.userName message:delegate.message];
+        delegate.message = nil;
+    }
     NSLog(@"END %s **********************************************", __FUNCTION__);
 }
 
 - (void)ReceiveMessageLyncToNotificationExtension:(const struct BInstantMessage *)arg1
 {
-    NSLog(@"START %s **********************************************", __FUNCTION__);
+    // NSLog(@"START %s **********************************************", __FUNCTION__);
     [self ReceiveMessageLyncToNotificationExtension:arg1];
     NSString *s = (NSString *)arg1->_field2.mCFRef;
-    NSLog(@"s=[%@]", s);
-    [self logBUser:arg1->_field5];
-    // TODO: あっているかわからない
-    delegate.userName = s;
-    NSLog(@"END %s **********************************************", __FUNCTION__);
+    //NSLog(@"s=[%@]", s);
+    //[self logBUser:arg1->_field5];
+    
+    // TODO: I want to retrive user name from struct BUser, but I can't...
+    delegate.message = [self removeTag:s];
+    // NSLog(@"END %s **********************************************", __FUNCTION__);
 }
 
-- (void)AppendUserUniNoticeLyncToNotificationExtension:(struct BUser *)arg1 inPrefixStrIndex:(short)arg2 inSuffixStrIndex:(short)arg3 inStyleIndex:(short)arg4 inPictID:(short)arg5 fInsertUserTile:(bool)arg6
+// 
+- (NSString *)removeTag:(NSString *)message
 {
-    NSLog(@"START %s **********************************************", __FUNCTION__);
-    [self AppendUserUniNoticeLyncToNotificationExtension:arg1 inPrefixStrIndex:arg2 inSuffixStrIndex:arg3 inStyleIndex:arg4 inPictID:arg5 fInsertUserTile:arg6];
-    NSLog(@"END %s **********************************************", __FUNCTION__);
-}
-
-// どうやら警告系のメッセージのときに呼ばれるようだ
-- (void)AppendUserUniNoticeWithCFStringLyncToNotificationExtension:(const struct BUser *)arg1 inMessageString:(struct __CFString *)arg2 inStyleIndex:(short)arg3 inPictID:(short)arg4 inAddDivider:(bool)arg5 pstrHTML:(const struct CFString *)arg6
-{
-    NSLog(@"START %s **********************************************", __FUNCTION__);
-    [self AppendUserUniNoticeWithCFStringLyncToNotificationExtension:arg1 inMessageString:arg2 inStyleIndex:arg3 inPictID:arg4 inAddDivider:arg5 pstrHTML:arg6];
-    NSString *str2 = (NSString *)arg2;
-    NSLog(@"str2=[%@]", str2);
-    [self logBUser:arg1];
-    [self notificate:@"who?" message:str2];
-    NSLog(@"END %s **********************************************", __FUNCTION__);
+    NSError *error = nil;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"</?[^>]*>" options:0 error:&error];
+    NSString *ret = [regex stringByReplacingMatchesInString:message options:0 range:NSMakeRange(0, [message length]) withTemplate:@""];
+    //NSLog(@"removeTag: [%@]", ret);
+    return ret;
 }
 
 - (void)logBUser:(const struct BUser *)buser
@@ -83,6 +73,7 @@ static LyncToNotificationExtensionUserNotificationDelegate *delegate = nil;
     NSLog(@"BUser: s14=[%@], s15=[%@], s20=[%@], s23=[%@]", s14, s15, s20, s23);
 }
 
+// Send message to Notification Center.
 // 通知センターにメッセージを送ります。
 - (void)notificate:(NSString *)userName message:(NSString *)message
 {
@@ -94,10 +85,7 @@ static LyncToNotificationExtensionUserNotificationDelegate *delegate = nil;
     notification.hasActionButton = YES;
     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
 }
-
-
 @end
-
 
 
 @implementation LyncToNotificationExtensionUserNotificationDelegate
